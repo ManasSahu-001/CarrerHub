@@ -1,7 +1,0 @@
-node_modules/
-.env
-public/images/*
-!public/images/.gitkeep
-*.log
-.DS_Store
-dist/
