@@ -36,3 +36,26 @@ const sendEmail = async (options) => {
 
   console.log(`📧 Email sent to ${options.email}`);
 };
+
+export const emailVerificationMailgenContent = (username, verificationUrl) => {
+  return {
+    body: {
+      name: username,
+      intro: "Welcome to CareerHub! We're very excited to have you on board.",
+      action: {
+        instructions: "To get started with CareerHub, please click here:",
+        button: {
+          color: "#22BC66",
+          text: "Verify your email",
+          link: verificationUrl,
+        },
+      },
+      outro: "Need help? Just reply to this email.",
+    },
+  };
+};
+
+export {
+   sendEmail,
+   emailVerificationMailgenContent
+}
